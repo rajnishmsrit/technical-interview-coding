@@ -7,25 +7,10 @@
 # include <vector>
 using namespace std;
 
-int countIndividualBits (int num){
-    int bitcount=0;
-    while(num>0){
-       if(num%2==1){
-           bitcount++;
-       }
-       num = (int)num/2;
-    }
-    return bitcount;    
-}
-
 class Solution {
 public:
-    vector<int> countBits(int num) {
-        vector<int> result;
-        for(int i=0; i<num; i++){
-            result.push_back(countIndividualBits(i));
-        }
-        return result;
+    string getSmallestString(int n, int k) {
+        
     }
 };
 
@@ -34,7 +19,7 @@ void test(){
     //int number = 28;
     //cout<<str[0];
     Solution s;
-    cout<<countIndividualBits(4);
+    //cout<<countIndividualBits(4);
     //cout<<s.countBits(3);
     //for (int i = A; i <= Z; i++)
     //cout << i << " ";
