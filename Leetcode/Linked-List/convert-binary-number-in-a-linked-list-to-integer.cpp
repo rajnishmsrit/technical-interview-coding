@@ -9,6 +9,20 @@
 # include <vector>
 using namespace std;
 
+struct Node
+{
+    int data;
+    struct Node* next; 
+};
+
+void PrintLinkedList(Node* n){
+    while(n!=NULL){
+        cout << n->data << "->";
+        n=n->next;
+    }
+    cout<<endl;
+}
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
