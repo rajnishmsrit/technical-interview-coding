@@ -36,7 +36,6 @@ void test(){
     vector<int> v{1,1,2};
     //cout << "Program starts \n";
     Solution s;
-    //cout << "The no is: " << s.stringExpander(4) << endl;
     cout << "The no is: " << s.kthGrammar(3,4) << endl;
 }
 
