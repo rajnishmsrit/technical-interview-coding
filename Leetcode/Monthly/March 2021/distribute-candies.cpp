@@ -17,7 +17,6 @@ public:
             return maxAllowedCandies;
         }
 
-        //int minValue = 
         return min(maxAllowedCandies, (int)uniqueCandies.size());;
     }
 };

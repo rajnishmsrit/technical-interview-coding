@@ -11,11 +11,7 @@ bool subsetSum(int arr[], int n, int sum)
         return false;
     }
 
-    if (arr[n]>sum)
-        subsetSum(arr, n-1, sum);
-    
-
-    return subsetSum(arr, n-1, sum) + subsetSum(arr, n-1, sum-arr[n]);
+    return subsetSum(arr, n-1, sum) || subsetSum(arr, n-1, sum-arr[n]);
 }
 
 // Subset Sum Problem

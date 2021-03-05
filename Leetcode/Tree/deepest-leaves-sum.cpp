@@ -17,14 +17,15 @@ public:
         if (root==NULL) return 0;
 
         currentDepth++;
+        maxCurrentDepth = max (maxCurrentDepth, currentDepth);
 
         if (currentDepth == maxCurrentDepth){
             sumAtCurrentMaxDepth += root->val;
         }
         
-        currentDepth = 1 + deepestLeavesSum(root->left, currentDepth);
-
+        deepestLeavesSum(root->left, currentDepth);
+        currentDepth = 0;
+        deepestLeavesSum(root->right, currentDepth);
         return sumAtCurrentMaxDepth;
-
     }
 };
